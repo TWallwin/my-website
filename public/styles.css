@@ -22,8 +22,7 @@ body {
   grid-area: "nav";
   display: flex;
   justify-content: space-between;
-
-  background-color: rgba(0, 0, 0, 0.306);
+  background-color: rgba(0, 0, 0, 0.324);
   width: 100vw;
 }
 div.nav-bar {
@@ -31,7 +30,7 @@ div.nav-bar {
 }
 .name-header {
   margin-left: 10px;
-  color: white;
+  color: black;
   font-size: 60px;
   font-weight: bold;
 }
@@ -43,7 +42,7 @@ div.nav-bar {
   align-items: center;
 }
 .link {
-  color: white;
+  color: rgb(0, 0, 0);
   margin-right: 10vw;
   font-size: 30px;
   margin-bottom: 10px;
@@ -194,7 +193,7 @@ main {
 }
 @media only screen and (min-width: 751px) {
   .nav-bar {
-    background-color: rgba(0, 0, 0, 0.612);
+    background-color: rgba(255, 255, 255, 0);
   }
 }
 @media only screen and (max-width: 900px) {
