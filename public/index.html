@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./index.js"></script>
+    <title>Tom Wallwin</title>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div class="nav-bar">
+        <a class="name-header" href="/">Tom Wallwin</a>
+        <div class="dropdown-button">
+          <span class="dropdown-button-text">&#9776;</span>
+        </div>
+      </div>
+      <div class="link-spread">
+        <div><a class="link" data-switcher data-link="1">About</a></div>
+        <div><a class="link" data-switcher data-link="2">Coding</a></div>
+        <div><a class="link" data-switcher data-link="3">Contact</a></div>
+      </div>
+    </nav>
+    <main>
+      <section class="pages">
+        <div id="error" class="page">
+          <h2>404 error - path not found</h2>
+          <a data-switcher data-link="1">back to main</a>
+        </div>
+        <div class="page"></div>
+        <div class="page" data-page="1">
+          <h2 class="page-item subtitle">About Me</h2>
+          <div class="page-item page-body">
+            <div class="intro">
+              <div class="img-wrap">
+                <img src="./Thomas_Wallwin.jpg" class="self-image" />
+              </div>
+              <p class="page-text">
+                I've been learning javascript for 3 months. I quit my job in a
+                factory to start learning to code full time and this is my
+                portfolio website for my programming projects so far.
+                <br />
+                <br />
+                Apart from coding I go outside climbing or running and play
+                football.
+              </p>
+            </div>
+          </div>
+          <h2 class="page-item subtitle">About This Website</h2>
+          <div class="page-item">
+            <p class="page-text">
+              I already had experience using React so I built this website using
+              only javascript. If I'm honest I'd stick to using React in future
+              but it was a good learning experience.
+              <br />
+              <br />
+              I used express to run the server which was new to me because I'd
+              only used it to create backend servers before.
+            </p>
+          </div>
+        </div>
+        <div class="page" data-page="2">
+          <h2 class="page-item subtitle">News Website</h2>
+          <div class="page-item">
+            <p class="page-text">
+              This website allows users to view, vote on and comment on articles
+              in a reddit style interface. It is built to be mobile
+              responsive.<br /><br />
+              I built the front end of this website using React. The backend of
+              the site is built using node.js and express which is complete with
+              a full test suite using jest. The database is created using PSQL.
+              <br />
+              <br />
+              The website is fully hosted,
+              <a
+                class="external-link"
+                href="https://twallwin-nc-news.netlify.app/"
+                >click here</a
+              >
+              to view it.
+
+              <a
+                class="external-link"
+                href="https://github.com/TWallwin/fe-nc-news"
+                >Click here</a
+              >
+              for the github repo.
+            </p>
+          </div>
+          <h2 class="page-item subtitle">Video Uploading App - NC Portfolio</h2>
+          <div class="page-item">
+            <p class="page-text">
+              As a group of five we built this app demo which will run on
+              android or ios.
+              <br /><br />
+              The idea for this app was to provide a place for software
+              developers to display demo videos of their creations.
+              <br /><br />
+              We self organised through out, having daily standups and creating
+              a trello ticket board to organise our work. We reviewed each
+              others code before merging it into the main branch on github.
+              <br /><br />
+              The front end of this app is built using react-native, the backend
+              is built using express and node.js and with integration testing
+              using jest. We hosted our videos on cloudinary and built our
+              database using PSQL.
+              <br />
+              <br />
+              <a
+                class="external-link"
+                href="https://github.com/TWallwin/nc-portfolio-fe"
+                >Click here</a
+              >
+              for the github repo.
+            </p>
+
+            <iframe
+              src="https://player.vimeo.com/video/696132854?h=7c654efa9d"
+              width="640"
+              height="360"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              class="video"
+            ></iframe>
+          </div>
+        </div>
+        <div class="page" data-page="3">
+          <h2 class="page-item subtitle">Find Me</h2>
+          <div class="page-item grid">
+            <div class="flip-card">
+              <div class="flip-card-inner contact-card">
+                <div class="contact-text flip-card-front">Github</div>
+                <div class="contact-text flip-card-back">
+                  <a
+                    href="https://github.com/TWallwin"
+                    class="flip-card-link hover"
+                    >Click Here</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner contact-card">
+                <div class="contact-text flip-card-front">LinkedIn</div>
+                <div class="contact-text flip-card-back">
+                  <a
+                    href="https://www.linkedin.com/in/tom-wallwin-73b7531b0/"
+                    class="flip-card-link hover"
+                    >Click Here</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner contact-card">
+                <div class="contact-text flip-card-front">Email</div>
+                <div class="contact-text flip-card-back">
+                  <p class="flip-card-link">tom.wallwin@gmail.com</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner contact-card">
+                <div class="contact-text flip-card-front">Phone</div>
+                <div class="contact-text flip-card-back">
+                  <p class="flip-card-link">07305544510</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
