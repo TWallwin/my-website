@@ -17,6 +17,8 @@ window.onload = () => {
     }
     link_spread.classList.add("is-active");
   });
+  const loading_symbol = document.querySelector(".lds-dual-ring");
+  loading_symbol.classList.add("loaded");
   checkCurrentPage(pageIndex);
   for (let i = 0; i < link_switchers.length; i++) {
     const link_switcher = link_switchers[i];

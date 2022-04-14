@@ -288,6 +288,34 @@ main {
     grid-auto-rows: minmax(175px, 1fr);
   }
 }
+.lds-dual-ring {
+  width: 80px;
+  height: 80px;
+  margin-top: 200px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin-top: 200px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+.loaded {
+  display: none;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @media only screen and (max-width: 500px) {
   .link-spread {
     display: none;
