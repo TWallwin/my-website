@@ -95,7 +95,7 @@ function checkCurrentPage(pageIndex) {
   }
 }
 function getDownloads() {
-  fetch("https://my-website-tw.herokuapp.com/api/views").then((res) => {
+  return fetch("https://my-website-tw.herokuapp.com/api/views").then((res) => {
     return res.data.views;
   });
 }
