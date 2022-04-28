@@ -8,7 +8,7 @@ window.onload = () => {
 
   getDownloads().then(async (views) => {
     function waitms() {
-      return new Promise((resolve) => setTimeout(resolve, 100));
+      return new Promise((resolve) => setTimeout(resolve, 1000 / viewCount));
     }
 
     for (let i = 0; i <= views.length; i++) {
