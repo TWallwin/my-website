@@ -1,4 +1,6 @@
 window.onload = () => {
+  fetch("https://my-website-tw.herokuapp.com/api/vews", { method: "POST" });
+
   const pageIndex = {
     1: "About",
     2: "Coding",
@@ -6,7 +8,6 @@ window.onload = () => {
   };
   const link_switchers = document.querySelectorAll("[data-switcher]");
 
-  //add if statement incase not mobile
   const link_spread = document.querySelector(".link-spread");
   const dropdown_button = document.querySelector(".dropdown-button");
   dropdown_button.addEventListener("click", () => {
