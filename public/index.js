@@ -7,7 +7,18 @@ window.onload = () => {
   });
 
   getDownloads().then((views) => {
-    viewCount.innerHTML = `${views.length} Views`;
+    
+    function waitms() {
+      return new Promise((resolve) => setTimeout(resolve, 1));
+    }
+
+    for (let i = 0; i <= views.length; i++) {
+      await waitms();
+      if (i < views.length) {
+        i += 1;
+      }
+      viewCount.innerHTML = `${i} Views`;
+    }
   });
 
   //handling routing
@@ -103,3 +114,5 @@ function getDownloads() {
       return body.views;
     });
 }
+
+
