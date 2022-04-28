@@ -100,7 +100,6 @@ function getDownloads() {
       return res.json();
     })
     .then((body) => {
-      console.log(body);
-      return body.data.views;
+      return body.views;
     });
 }
