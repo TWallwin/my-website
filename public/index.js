@@ -97,7 +97,7 @@ function checkCurrentPage(pageIndex) {
 function getDownloads() {
   return fetch("https://my-website-tw.herokuapp.com/api/views")
     .then((res) => {
-      return res.json().data.views;
+      return res.json();
     })
     .then((body) => {
       console.log(body);
