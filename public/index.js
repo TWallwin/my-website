@@ -6,8 +6,7 @@ window.onload = () => {
     mode: "cors",
   });
 
-  getDownloads().then((views) => {
-    
+  getDownloads().then(async (views) => {
     function waitms() {
       return new Promise((resolve) => setTimeout(resolve, 1));
     }
@@ -114,5 +113,3 @@ function getDownloads() {
       return body.views;
     });
 }
-
-
