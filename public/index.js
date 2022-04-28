@@ -1,5 +1,5 @@
 window.onload = () => {
-  fetch("https://my-website-tw.herokuapp.com/api/vews", { method: "POST" });
+  fetch("https://my-website-tw.herokuapp.com/api/views", { method: "POST" });
 
   const pageIndex = {
     1: "About",
