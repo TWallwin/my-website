@@ -1,9 +1,17 @@
 window.onload = () => {
+  //fetching view data
+  const viewCount = document.querySelector(".view-count");
   fetch("https://my-website-tw.herokuapp.com/api/views", {
     method: "POST",
     mode: "cors",
   });
+  document.addEventListener("DOMContentLoaded", function () {
+    getDownloads().then((views) => {
+      viewCount.innerHTML = `${views.length} Views`;
+    });
+  });
 
+  //handling routing
   const pageIndex = {
     1: "About",
     2: "Coding",
@@ -86,4 +94,9 @@ function checkCurrentPage(pageIndex) {
       break;
     }
   }
+}
+function getDownloads() {
+  fetch("https://my-website-tw.herokuapp.com/api/views").then((res) => {
+    return res.data.views;
+  });
 }
