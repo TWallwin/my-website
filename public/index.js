@@ -1,5 +1,8 @@
 window.onload = () => {
-  fetch("https://my-website-tw.herokuapp.com/api/views", { method: "POST" });
+  fetch("https://my-website-tw.herokuapp.com/api/views", {
+    method: "POST",
+    mode: "cors",
+  });
 
   const pageIndex = {
     1: "About",
