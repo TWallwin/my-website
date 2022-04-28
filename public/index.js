@@ -5,10 +5,9 @@ window.onload = () => {
     method: "POST",
     mode: "cors",
   });
-  document.addEventListener("DOMContentLoaded", function () {
-    getDownloads().then((views) => {
-      viewCount.innerHTML = `${views.length} Views`;
-    });
+
+  getDownloads().then((views) => {
+    viewCount.innerHTML = `${views.length} Views`;
   });
 
   //handling routing
