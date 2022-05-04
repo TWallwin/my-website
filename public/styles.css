@@ -22,12 +22,9 @@ body {
   grid-area: "nav";
   display: flex;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.324);
   width: 100vw;
 }
-div.nav-bar {
-  background-color: rgba(255, 255, 255, 0);
-}
+
 .name-header {
   margin-left: 10px;
   color: black;
@@ -221,19 +218,17 @@ main {
   }
 }
 @media only screen and (max-width: 750px) {
-  .link-spread {
-    display: none;
-  }
-  .main {
-    background-color: rgba(226, 226, 247, 0.8);
-  }
-  body {
-    background-color: rgba(226, 226, 247, 0.8);
-    display: block;
-  }
   .nav-bar {
     align-items: center;
   }
+  .link-spread {
+    display: none;
+  }
+
+  body {
+    display: block;
+  }
+
   .dropdown-button {
     display: flex;
     border-radius: 2px;
@@ -278,6 +273,7 @@ main {
     height: 300px;
     justify-content: space-around;
     align-items: center;
+    border-radius: 2px;
   }
   .link-spread.is-active .link {
     margin: 0;
@@ -286,9 +282,6 @@ main {
   nav.nav-bar {
     display: flex;
     flex-direction: column;
-  }
-  div.nav-bar {
-    background-color: rgba(0, 0, 0, 0.306);
   }
 
   .page.is-active {
@@ -331,77 +324,15 @@ main {
   }
 }
 @media only screen and (max-width: 500px) {
-  .link-spread {
-    display: none;
-  }
-  body {
-    display: block;
-  }
-  .nav-bar {
-    align-items: center;
-  }
-  .dropdown-button {
-    display: flex;
-    border-radius: 2px;
-    justify-content: center;
-    margin-right: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: rgba(0, 0, 0, 0.512);
-    height: 70px;
-    width: 70px;
-  }
-  .dropdown-button:hover,
-  .dropdown-button:active {
-    background-color: rgba(0, 0, 0, 0.312);
-  }
-  .dropdown-button-text {
-    position: absolute;
-    margin-top: -15px;
-    font-size: 60px;
-    color: white;
-    content: "\2630";
-  }
   .pages {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
     width: 100%;
   }
-  .page.is-active {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
+
   .page-item {
     margin: 10px;
-  }
-  .intro {
-    display: flex;
-    flex-direction: column;
-  }
-  .img-wrap {
-    display: flex;
-    justify-content: center;
-  }
-  .link-spread.is-active {
-    display: flex;
-    flex-direction: column;
-    height: 300px;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 2px;
-  }
-  .link-spread.is-active .link {
-    margin: 0;
-    text-align: center;
-  }
-  nav.nav-bar {
-    display: flex;
-    flex-direction: column;
-  }
-  div.nav-bar {
-    background-color: rgba(0, 0, 0, 0.306);
   }
 
   .grid {
