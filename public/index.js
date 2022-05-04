@@ -8,8 +8,9 @@ window.onload = () => {
     2: "Coding",
     3: "Contact",
   };
+  let next_page;
   const link_switchers = document.querySelectorAll("[data-switcher]");
-
+  let viewsLoaded = false;
   const link_spread = document.querySelector(".link-spread");
   const dropdown_button = document.querySelector(".dropdown-button");
   dropdown_button.addEventListener("click", () => {
@@ -22,7 +23,11 @@ window.onload = () => {
   });
   const loading_symbol = document.querySelector(".lds-dual-ring");
   getViews().then((views) => {
-    loading_symbol.classList.add("loaded");
+    viewsLoaded = true;
+    if (next_page) {
+      next_page.classList.add("is-active");
+      loading_symbol.classList.add("loaded");
+    }
     observer(views).observe(viewCount);
   });
 
@@ -53,10 +58,11 @@ window.onload = () => {
       current_page.classList.remove("is-active");
     }
 
-    const next_page = document.querySelector(
-      `.pages .page[data-page="${page_id}"]`,
-    );
-    next_page.classList.add("is-active");
+    next_page = document.querySelector(`.pages .page[data-page="${page_id}"]`);
+    if (viewsLoaded) {
+      next_page.classList.add("is-active");
+      loading_symbol.classList.add("loaded");
+    }
     history.pushState(
       "data to be passed",
       "Tom Wallwin",
