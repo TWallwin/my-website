@@ -242,8 +242,21 @@ main {
     content: "\2630";
     transition: color 0.5s;
   }
-  .dropdown-button-text.is-active {
+  nav.is-active .nav-bar .dropdown-button-text {
     color: black;
+  }
+  nav .link-spread-container {
+    display: flex;
+    flex-direction: column;
+
+    transform: translateY(-50px);
+    opacity: 0;
+    overflow: hidden;
+    transition: all 1s;
+  }
+  nav.is-active .link-spread-container {
+    transform: translateY(0);
+    opacity: 1;
   }
   .pages {
     width: 100%;
@@ -264,7 +277,7 @@ main {
   .link-spread {
     display: none;
   }
-  .link-spread.is-active {
+  nav.is-active div .link-spread {
     display: flex;
     height: 300px;
     flex-direction: column;
@@ -272,7 +285,7 @@ main {
     align-items: center;
     border-radius: 2px;
   }
-  .link-spread.is-active .link {
+  nav.is-active div .link-spread .link {
     margin: 0;
     text-align: center;
   }

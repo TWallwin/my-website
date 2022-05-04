@@ -11,18 +11,17 @@ window.onload = () => {
   let next_page;
   const link_switchers = document.querySelectorAll("[data-switcher]");
   let viewsLoaded = false;
-  const link_spread = document.querySelector(".link-spread");
   const dropdown_button = document.querySelector(".dropdown-button");
   const dropdown_button_text = document.querySelector(".dropdown-button-text");
+  const nav = document.querySelector("nav");
   dropdown_button.addEventListener("click", () => {
-    const active_link_spread = document.querySelector(".link-spread.is-active");
-    if (active_link_spread) {
-      dropdown_button_text.classList.remove("is-active");
-      link_spread.classList.remove("is-active");
+    const active_nav = document.querySelector("nav.is-active");
+    if (active_nav) {
+      nav.classList.remove("is-active");
+
       return;
     }
-    dropdown_button_text.classList.add("is-active");
-    link_spread.classList.add("is-active");
+    nav.classList.add("is-active");
   });
   const loading_symbol = document.querySelector(".lds-dual-ring");
   getViews().then((views) => {
@@ -42,11 +41,10 @@ window.onload = () => {
     link_switcher.addEventListener("click", () => {
       const active_link = document.querySelector(".link-spread .is-active");
       const active_link_spread = document.querySelector(
-        ".link-spread.is-active",
+        "nav.is-active div .link-spread",
       );
       if (active_link_spread) {
-        active_link_spread.classList.remove("is-active");
-        dropdown_button_text.classList.remove("is-active");
+        nav.classList.remove("is-active");
       }
       if (active_link) {
         active_link.classList.remove("is-active");
