@@ -124,7 +124,7 @@ window.onload = () => {
     }
     incViews();
   }
-  const observer = function makeObserver(views) {
+  let observer = function makeObserver(views) {
     let startedCounting = false;
     return new IntersectionObserver(
       (entries) => {
