@@ -137,7 +137,7 @@ window.onload = () => {
           startedCounting = true;
         }
       },
-      { threshold: [0] },
+      { threshold: [0.7] },
     );
   };
 };
