@@ -11,15 +11,15 @@ window.onload = () => {
   let next_page;
   const link_switchers = document.querySelectorAll("[data-switcher]");
   let viewsLoaded = false;
-  const link_spread = document.querySelector(".link-spread");
+  const nav = document.querySelector("nav");
   const dropdown_button = document.querySelector(".dropdown-button");
   dropdown_button.addEventListener("click", () => {
-    const active_link_spread = document.querySelector(".link-spread.is-active");
-    if (active_link_spread) {
-      link_spread.classList.remove("is-active");
+    const active_nav = document.querySelector("nav.is-active");
+    if (active_nav) {
+      nav.classList.remove("is-active");
       return;
     }
-    link_spread.classList.add("is-active");
+    nav.classList.add("is-active");
   });
   const loading_symbol = document.querySelector(".lds-dual-ring");
   getViews().then((views) => {
@@ -38,9 +38,7 @@ window.onload = () => {
     const page_id = link_switcher.dataset.link;
     link_switcher.addEventListener("click", () => {
       const active_link = document.querySelector(".link-spread .is-active");
-      const active_link_spread = document.querySelector(
-        ".link-spread.is-active",
-      );
+      const active_link_spread = document.querySelector("nav.is-active");
       if (active_link_spread) {
         active_link_spread.classList.remove("is-active");
       }

@@ -18,8 +18,13 @@ body {
   grid-template-areas: "nav" "main";
   background-color: rgba(27, 168, 164, 0.267);
 }
-.nav-bar {
+nav {
   grid-area: "nav";
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+}
+.nav-bar {
   display: flex;
   justify-content: space-between;
   width: 100vw;
@@ -37,6 +42,9 @@ body {
 .link-spread {
   display: flex;
   align-items: center;
+}
+.link-spread-container {
+  display: flex;
 }
 .link {
   color: rgb(0, 0, 0);
@@ -224,7 +232,9 @@ main {
   .link-spread {
     display: none;
   }
-
+  .link-spread-container {
+    display: block;
+  }
   body {
     display: block;
   }
@@ -240,16 +250,30 @@ main {
     height: 70px;
     width: 70px;
   }
-  .dropdown-button:hover,
-  .dropdown-button:active {
-    background-color: rgba(0, 0, 0, 0.312);
-  }
+
   .dropdown-button-text {
     position: absolute;
     margin-top: -15px;
     font-size: 60px;
     color: white;
     content: "\2630";
+    transition: color 0.5s;
+  }
+  nav.is-active div .dropdown-button-text {
+    color: black;
+  }
+  nav .link-spread-container {
+    display: flex;
+    flex-direction: column;
+
+    transform: translateY(-50px);
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+  nav.is-active .link-spread-container {
+    transform: translateY(0);
+    opacity: 1;
   }
   .pages {
     width: 100%;
@@ -267,7 +291,7 @@ main {
     display: flex;
     justify-content: center;
   }
-  .link-spread.is-active {
+  nav.is-active div .link-spread {
     display: flex;
     flex-direction: column;
     height: 300px;
@@ -275,11 +299,11 @@ main {
     align-items: center;
     border-radius: 2px;
   }
-  .link-spread.is-active .link {
+  nav.is-active div .link-spread .link {
     margin: 0;
     text-align: center;
   }
-  nav.nav-bar {
+  nav {
     display: flex;
     flex-direction: column;
   }
