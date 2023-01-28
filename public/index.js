@@ -22,6 +22,7 @@ window.onload = () => {
     nav.classList.add("is-active");
   });
   const loading_symbol = document.querySelector(".lds-dual-ring");
+  
   getViews().then((views) => {
     viewsLoaded = true;
     if (next_page) {
@@ -97,7 +98,7 @@ window.onload = () => {
   }
   function getViews() {
     //sends api request to backend to get view array
-    return fetch("https://my-website-tw.herokuapp.com/api/views")
+    return fetch("https://my-website-be-render.onrender.com/api/views")
       .then((res) => {
         return res.json();
       })
@@ -107,7 +108,7 @@ window.onload = () => {
   }
   function incViews() {
     //sends api request to backend to add a new view
-    return fetch("https://my-website-tw.herokuapp.com/api/views", {
+    return fetch("https://my-website-be-render.onrender.com/api/views", {
       method: "POST",
       mode: "cors",
     });
